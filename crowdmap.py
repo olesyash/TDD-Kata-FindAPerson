@@ -1,5 +1,6 @@
 __author__ = 'olesya'
 
+
 class Crowdmap():
     def __init__(self, l_post):
         self.posts_list = l_post
@@ -11,6 +12,9 @@ class Crowdmap():
                 list_of_posts.append(l)
         return list_of_posts
 
-
     def is_location(self, name):
-        return True
+        flag = False
+        for l in self.posts_list:
+            if "Bangkok" in l:
+                flag = True
+        return flag
