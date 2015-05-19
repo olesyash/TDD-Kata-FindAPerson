@@ -10,3 +10,7 @@ class Crowdmap():
             if name in l:
                 list_of_posts.append(l)
         return list_of_posts
+
+
+    def is_location(self, name):
+        return False

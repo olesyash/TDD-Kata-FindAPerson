@@ -15,8 +15,20 @@ class FindPersonTests(unittest.TestCase):
         self.assertTrue(flag)
 
     def test_get_all_posts_for_missing_name(self):
-        posts = self.crowdmap.get_all_posts_for("Or2")
-        self.assertFalse(posts)
+        name = "Or2"
+        flag = True
+        posts = self.crowdmap.get_all_posts_for(name)
+        for l in posts:
+            if name not in l:
+               flag = False
+            self.assertFalse(flag)
+
+    def test_includes_location_information(self):
+        name = "Or"
+        self.assertTrue(self.crowdmap.is_location(name))
+
+
+
 
     def test_homework_examlpe(self):
         posts = self.crowdmap.get_all_posts_for("Or2")
