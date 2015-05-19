@@ -13,8 +13,9 @@ class Crowdmap():
         return list_of_posts
 
     def is_location(self, name):
+        list_of_posts = self.get_all_posts_for(name)
         flag = False
-        for l in self.posts_list:
+        for l in list_of_posts:
             if "Bangkok" in l:
                 flag = True
         return flag
