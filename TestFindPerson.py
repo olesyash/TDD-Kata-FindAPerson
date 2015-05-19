@@ -27,9 +27,3 @@ class FindPersonTests(unittest.TestCase):
         name = "Or"
         self.assertTrue(self.crowdmap.is_location(name))
 
-
-
-
-    def test_homework_examlpe(self):
-        posts = self.crowdmap.get_all_posts_for("Or2")
-        self.assertIn("Or A", posts)

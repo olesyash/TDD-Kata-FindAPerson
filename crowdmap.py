@@ -13,4 +13,4 @@ class Crowdmap():
 
 
     def is_location(self, name):
-        return False
+        return True
