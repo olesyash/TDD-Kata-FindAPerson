@@ -6,8 +6,13 @@ class FindPersonTests(unittest.TestCase):
         self.crowdmap = Crowdmap(["I met Or A. at Chabad house Bangkok", "We found Or A. R.I.P at Langtang valley"])
 
     def test_getAllPostsForName(self):
-       posts = self.crowdmap.get_all_posts_for("Or")
-       self.assertTrue(posts)
+        name = "Or"
+        flag = True
+        posts = self.crowdmap.get_all_posts_for(name)
+        for l in posts:
+           if name not in l:
+               flag = False
+        self.assertTrue(flag)
 
     def test_get_all_posts_for_missing_name(self):
         posts = self.crowdmap.get_all_posts_for("Or2")

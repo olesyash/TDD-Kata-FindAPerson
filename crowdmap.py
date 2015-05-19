@@ -5,7 +5,8 @@ class Crowdmap():
         self.posts_list = l_post
 
     def get_all_posts_for(self, name):
+        list_of_posts = list()
         for l in self.posts_list:
             if name in l:
-                return True
-        return False
+                list_of_posts.append(l)
+        return list_of_posts
