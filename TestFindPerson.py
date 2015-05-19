@@ -37,4 +37,4 @@ class FindPersonTests(unittest.TestCase):
 
     def test_inconsistencies_for_missing_name(self):
         name = "Or2"
-        self.assertTrue(self.crowdmap.is_inconsistencies(name))
+        self.assertFalse(self.crowdmap.is_inconsistencies(name))
