@@ -19,3 +19,6 @@ class Crowdmap():
             if "Bangkok" in l:
                 flag = True
         return flag
+
+    def is_inconsistencies(self):
+        return False
