@@ -21,4 +21,4 @@ class Crowdmap():
         return flag
 
     def is_inconsistencies(self):
-        return False
+        return True
