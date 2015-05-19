@@ -20,5 +20,20 @@ class Crowdmap():
                 flag = True
         return flag
 
-    def is_inconsistencies(self):
-        return True
+    def is_location_for_post(self, post, location):
+        flag = False
+        if location in post:
+            flag = True
+        return flag
+
+    def is_inconsistencies(self, name):
+        list_of_posts = self.get_all_posts_for(name)
+        counter_posts = len(list_of_posts)
+        counter_bangok = 0
+        for l in list_of_posts:
+            if self.is_location_for_post(l,"Bangkok"):
+                counter_bangok += 1
+        if counter_bangok == counter_posts:
+            return False
+        else:
+            return True

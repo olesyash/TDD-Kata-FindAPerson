@@ -31,7 +31,6 @@ class FindPersonTests(unittest.TestCase):
         name = "Or2"
         self.assertFalse(self.crowdmap.is_location(name))
 
-
     def test_inconsistencies(self):
         name = "Or"
-        self.assertTrue(self.crowdmap.is_inconsistencies())
+        self.assertTrue(self.crowdmap.is_inconsistencies(name))
