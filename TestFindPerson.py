@@ -29,4 +29,4 @@ class FindPersonTests(unittest.TestCase):
 
     def test_includes_location_information_for_misssing_name(self):
         name = "Or2"
-        self.assertTrue(self.crowdmap.is_location(name))
+        self.assertFalse(self.crowdmap.is_location(name))
